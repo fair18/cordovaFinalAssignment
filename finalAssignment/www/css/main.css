@@ -1,0 +1,56 @@
+p.heading {
+	font-size: 11pt;
+	text-align: center;
+}
+
+.formbox1 {
+	padding-top: 8em;
+}
+
+.link-block {
+	width: 40%;
+}
+
+#mImg {
+	width: auto;
+	height: 190px;
+}
+
+#mImg, #txt {
+	margin-top: 5%;
+	display: block;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#txt {
+	margin-top: 15%;
+	font-weight: bold;
+}
+
+#getMedia {
+	text-align: center;
+}
+
+#recordAudio, #playAudio {
+	width: 49%;
+	display: inline-block;
+}
+
+#holder {
+	padding: 2px;
+	height: 180px;
+	width: 280px;
+	text-align: center;
+}
+
+#setGeolocation {
+	text-align: center;
+	font-size: 10pt;
+}
+
+#mapholder, #image {
+	width: 280px;
+	height: 155px;
+}

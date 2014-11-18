@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=medium-dpi" />
+        <meta name="msapplication-tap-highlight" content="no" />
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/jqm-icon-pack-fa.css" />
+		<link rel="stylesheet" type="text/css" href="css/main.css" />
+		<link rel="stylesheet" type="text/css" href="css/mainpage.css" />
+		<link rel="stylesheet" type="text/css" href="css/homepage.css" />
+		<link rel="stylesheet" type="text/css" href="css/contact.css" />
+		<link rel="stylesheet" type="text/css" href="css/media.css" />
+		<title>Final Assignment</title>
+		
+    </head>
+    <body>
+		<div data-role="page" data-theme="c" id="index">
+			<div data-role="header" data-position="fixed">
+				<p class="heading">Welcome</p>
+			</div>
+			<div data-role="main" class="ui-content formbox1">
+				<div id="formbox">
+					<input type="text" value="" placeholder="username" id="usrName"/>
+					<input type="password" value="" placeholder="password" id="pass"/>
+					<a id="submit" href data-role="button" data-icon="sign-in" class="ui-link ui-btn ui-icon-sign-in ui-btn-icon-left ui-shadow ui-corner-all">Login</a>
+				</div>
+			</div>
+			<div data-role="footer" data-position="fixed">
+				<p class="heading">&copy; Copyright 2014. Created by Y.Borysiuk</p>
+			</div>
+		</div>		
+		<!--Home page-->
+		<div data-role="page"  data-theme="a" id="home">
+			<div data-role="header" data-position="fixed">
+				<p class="heading">Welcome to Homepage</p>
+				<a href="index.html" data-role="button" data-icon="home" data-iconpos="notext" class="ui-btn-right ui-shadow">Log out</a>
+			</div>
+			<div data-role="main" class="ui-content">
+				<img id="mImg" src="http://cs619221.vk.me/v619221634/ed1f/Q_gdr4VNVck.jpg" title="my Image" alt="myImage"/>
+				<div id="txt">
+					<p>Name: Yuriy Borysiuk</p>
+					<p>Student ID: c06481131</p>
+				</div>
+			</div>
+			<div data-role="footer" data-position="fixed">
+				<div data-role="navbar">
+					<ul class="ui-grid-b">
+						<li class="ui-block-a">
+							<a href="#home" data-icon="home" class="ui-link ui-btn ui-icon-home ui-btn-icon-top">Home</a>
+						</li>
+						<li class="ui-block-b">
+							<a href="#contact" data-icon="mail" class="ui-link ui-btn ui-icon-mail ui-btn-icon-top">Contact</a>
+						</li>
+						<li class="ui-block-c">
+							<a href="#media" data-icon="audio" class="ui-link ui-btn ui-icon-audio ui-btn-icon-top">Media</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		<!--Contact page-->
+		<div data-role="page" data-theme="b" id="contact">
+			<div data-role="header" data-position="fixed">
+				<p class="heading">Contact me</p>
+				<a href="index.html" data-role="button" data-icon="home" data-iconpos="notext" class="ui-btn-right ui-shadow">Log out</a>
+			</div>
+			<div data-role="main" class="ui-content">
+				<div id="email">
+					<input type="text" value="" placeholder="example@gmail.com" id="mail" />
+					<textarea id="textbox"></textarea>
+					<button id="send" class="ui-btn ui-icon-mail ui-btn-icon-left ui-shadow ui-corner-all">Send</button>
+				</div> 
+			</div>
+			<div data-role="footer" data-position="fixed">
+				<div data-role="navbar">
+					<ul class="ui-grid-b">
+						<li class="ui-block-a">
+							<a href="#home" data-icon="home" class="ui-link ui-btn ui-icon-home ui-btn-icon-top">Home</a>
+						</li>
+						<li class="ui-block-b">
+							<a href="#contact" data-icon="mail" class="ui-link ui-btn ui-icon-mail ui-btn-icon-top">Contact</a>
+						</li>
+						<li class="ui-block-c">
+							<a href="#media" data-icon="audio" class="ui-link ui-btn ui-icon-audio ui-btn-icon-top">Media</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!--Media page-->
+		<div data-role="page" data-theme="d" id="media">
+			<div data-role="header" data-position="fixed">
+				<p class="heading">Welcome to Media page</p>
+				<a href="index.html" data-role="button" data-icon="home" data-iconpos="notext" class="ui-btn-right ui-shadow">Log out</a>
+			</div>
+			<div data-role="main" class="ui-content">
+				<div id="boxCamera">
+					<button id="takePic" class="ui-btn ui-icon-camera ui-btn-icon-left ui-shadow ui-corner-all">Take a picture</button>
+				</div>
+				<div id="boxGeolocation">
+					<button id="getGeolocation" class="ui-btn ui-icon-location ui-btn-icon-left ui-shadow ui-corner-all">My Location</button>
+				</div>
+				<div id="getMedia">
+					<button id="recordAudio" data-icon="microphone" class="ui-link ui-btn ui-icon-microphone ui-btn-icon-left ui-shadow ui-corner-all">Record</button>
+					<button id="playAudio" data-icon="play" class="ui-link ui-btn ui-icon-play ui-btn-icon-left ui-shadow ui-corner-all">Play</button>
+					
+				</div>
+				<div id="holder"> 
+					<img id="image" src="" style="display:none;">
+					<p id="setGeolocation"> </p>
+					<div id="mapholder"> </div>
+				</div>
+			</div>
+			<div data-role="footer" data-position="fixed">
+				<div data-role="navbar">
+					<ul class="ui-grid-b">
+						<li class="ui-block-a">
+							<a href="#home" data-icon="home" class="ui-link ui-btn ui-icon-home ui-btn-icon-top">Home</a>
+						</li>
+						<li class="ui-block-b">
+							<a href="#contact" data-icon="mail" class="ui-link ui-btn ui-icon-mail ui-btn-icon-top">Contact</a>
+						</li>
+						<li class="ui-block-c">
+							<a href="#media" data-icon="audio" class="ui-link ui-btn ui-icon-audio ui-btn-icon-top">Media</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
+		<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+		<script type="text/javascript" src="js/validation.js"></script>
+		<script type="text/javascript" src="js/deviceready.js"></script>
+ 		<script type="text/javascript" src="js/camera.js"></script>
+		<script type="text/javascript" src="js/geolocation.js"></script>
+		<script type="text/javascript" src="js/media.js"></script>
+		<script type="text/javascript" src="js/email.js"></script>
+		<script type="text/javascript">
+		document.addEventListener("backbutton", onBackKeyDown, false);
+			function onBackKeyDown(e) {
+			e.preventDefault();
+		}
+		</script>
+    </body>
+</html>
